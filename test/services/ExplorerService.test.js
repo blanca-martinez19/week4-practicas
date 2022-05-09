@@ -1,5 +1,5 @@
 const Reader = require("../../lib/utils/Reader");
-const ExplorerService = require('../../lib/services/ExplorerService'); 
+const ExplorerService = require("../../lib/services/ExplorerService"); 
 
 describe("Test Service ExplorerSevice",()=>{
     const explorers = Reader.readJsonFile("explorers.json");
@@ -16,7 +16,7 @@ describe("Test Service ExplorerSevice",()=>{
     test("1) Nombres de exlorers por mision", ()=>{
         const explorersNames = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
 
-        expect(explorersNames).toContain('ajolonauta13');
-        expect(explorersNames).not.toContain('ajolonauta9');
+        expect(explorersNames).toContain("ajolonauta13");
+        expect(explorersNames).not.toContain("ajolonauta9");
     });
-})
+});
