@@ -16,7 +16,7 @@ describe("Test Service ExplorerSevice",()=>{
     test("1) Nombres de exlorers por mision", ()=>{
         const explorersNames = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
 
-        expect(explorersNames).toContain('ajolonauta131');
+        expect(explorersNames).toContain('ajolonauta13');
         expect(explorersNames).not.toContain('ajolonauta9');
     });
 })
