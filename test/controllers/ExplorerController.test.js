@@ -1,4 +1,5 @@
-const ExplorerController = require('../../lib/controllers/ExplorerController')
+const ExplorerController = require('../../lib/controllers/ExplorerController');
+const FizzbuzzService = require('../../lib/services/FizzbuzzService');
 
 describe("Pruebas para ExplorerController", ()=>{
     test('1) Test getExplorersByMission', ()=>{
@@ -15,5 +16,10 @@ describe("Pruebas para ExplorerController", ()=>{
         const noexplorers = ExplorerController.getExplorersAmonutByMission('node');
 
         expect(noexplorers).toBe(10);
+    });
+    test('4) Test applyValidationInNumber', ()=>{
+        const trick = FizzbuzzService.applyValidationInNumber(15);
+
+        expect(trick).toBe("FIZZBUZZ");
     });
 });
